@@ -16,4 +16,10 @@ public class Evento {
         return responsavel;
     }
     
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public void setResponsavel(String responsavel){
+        this.responsavel = responsavel;
+    }
 }
