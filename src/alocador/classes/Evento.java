@@ -8,4 +8,12 @@ public class Evento {
     protected String responsavel;
     protected Sala salaUtilizada;
     protected Semestre semestre;
+    
+    public String getNome(){
+        return nome;
+    }
+    public String getResponsavel(){
+        return responsavel;
+    }
+    
 }
