@@ -34,7 +34,7 @@ public class DefinePeriodo {
 
     @Override
     public String toString() {
-        return "Periodo do evento-> Data Inicial: " + dataInicial + ", Data Final" + dataFinal;
+        return "Periodo do evento-> Data: " + dataInicial;
     }
   
 }
