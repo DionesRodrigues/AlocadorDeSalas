@@ -5,12 +5,17 @@ import alocador.enuns.TiposDeSala;
 public class SalaDeVideoConferencia extends Sala {
     private boolean camara = true;
     private boolean microfone = true;
+    private TiposDeSala tipo;
     
     //cria objeto sala do tipo Sala de video confencia
-     public void CriarSala(String id, int cap,boolean m, boolean qb,boolean dt, boolean ar,TiposDeSala tipo,boolean cam, boolean mic){
-        super.CriarSala(id, cap, m, qb, dt, ar, tipo);
-        camara = cam;
-        microfone = mic;
+    @Override
+     public void CriarSala(String identificacao, int capacidade,boolean mesa, boolean quadroBranco,
+            boolean dataShow, boolean arCondicionado){
+        
+        super.CriarSala(identificacao, capacidade, mesa, quadroBranco, dataShow, arCondicionado);
+        this.camara = true;
+        this.microfone = true;
+        this.tipo = TiposDeSala.VIDEO_CONFERENCIA;
     };
     
     public boolean getCamara() {

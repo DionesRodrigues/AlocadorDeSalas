@@ -9,7 +9,7 @@ public class Sala {
     protected boolean quadroBranco = true;
     protected boolean dataShow = true;
     protected boolean arCondicionado = true;
-    protected TiposDeSala tipo;
+    protected boolean impressoraDeCircuitos = true;
     
     public Sala(){
         identificacao = "vazio";
@@ -18,17 +18,34 @@ public class Sala {
         quadroBranco = false;
         dataShow = false;
         arCondicionado = false;
-        tipo = TiposDeSala.NORMAL;
     };
     
-    public void CriarSala(String id, int cap,boolean m, boolean qb,boolean dt, boolean ar,TiposDeSala tipo){
+    public Sala(String id, int cap,boolean m, boolean qb,boolean dt, boolean ar,TiposDeSala tipo){
         identificacao = id;
         capacidade = cap;
         mesa = m;
         quadroBranco = qb;
         dataShow = dt;
         arCondicionado = ar;
-        this.tipo = tipo;
+    };
+    
+    /**
+     *
+     * @param identificacao
+     * @param capacidade
+     * @param mesa
+     * @param quadroBranco
+     * @param dataShow
+     * @param arCondicionado
+     */
+    public void CriarSala(String identificacao, int capacidade,boolean mesa, boolean quadroBranco,
+        boolean dataShow, boolean arCondicionado){
+        this.identificacao = identificacao;
+        this.capacidade = capacidade;
+        this.mesa = mesa;
+        this.quadroBranco = quadroBranco;
+        this.dataShow = dataShow;
+        this.arCondicionado = arCondicionado;
     };
 
     public String getIdentificacao() {
@@ -81,8 +98,9 @@ public class Sala {
 
     @Override
     public String toString() {
-        return "Detalhes da sala: " + "identificacao = " + identificacao + ", capacidade = " + capacidade + ", mesa = " + mesa + ", quadroBranco = " + quadroBranco + ", dataShow = " + dataShow + ", arCondicionado = " + arCondicionado + ", tipo "+ tipo;
+        return "Detalhes da sala: " + "identificacao = " + identificacao + ", "
+                + "capacidade = " + capacidade + ", mesa = " + mesa + ", quadroBranco = " 
+                + quadroBranco + ", dataShow = " + dataShow + ", arCondicionado = " + arCondicionado;
     }
-    
     
 }

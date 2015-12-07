@@ -5,11 +5,15 @@ import alocador.enuns.TiposDeSala;
 public class LabEletronica extends Sala{
     private boolean impressoraCircuitos = true;
     private int quatImpressorasCircuitos = 0;
+    private TiposDeSala tipo;
 
-     public void CriarSala(String id, int cap,boolean m, boolean qb,boolean dt, boolean ar,TiposDeSala tipo,boolean imp,int quantImpre){
-        super.CriarSala(id, cap, m, qb, dt, ar, tipo);
-        impressoraCircuitos = imp;
-        quatImpressorasCircuitos = quantImpre;
+     public void CriarSala(String identificacao, int capacidade,boolean mesa, boolean quadroBranco,
+        boolean dataShow, boolean arCondicionado,int quatImpressorasCircuitos){
+        
+        super.CriarSala(identificacao, capacidade, mesa, quadroBranco, dataShow, arCondicionado);
+        impressoraCircuitos = true;
+        this.quatImpressorasCircuitos = quatImpressorasCircuitos;
+        this.tipo = TiposDeSala.LAB_ELETRONICA;
     };
     
     public boolean getImpressoraCircuitos() {

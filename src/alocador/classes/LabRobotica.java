@@ -6,10 +6,14 @@ import alocador.enuns.TiposDeSala;
 public class LabRobotica extends Sala {
     private boolean robos = true;
     private int quantRobos = 0;
+    private TiposDeSala tipo;
 
-     public void CriarSala(String id, int cap,boolean m, boolean qb,boolean dt, boolean ar,TiposDeSala tipo, boolean temRobo, int quantRobos){
-        robos = temRobo;
+     public void CriarSala(String identificacao, int capacidade,boolean mesa, boolean quadroBranco,
+        boolean dataShow, boolean arCondicionado,int quantRobos){
+        super.CriarSala(identificacao, capacidade, mesa, quadroBranco, dataShow, arCondicionado);
+        robos = true;
         this.quantRobos = quantRobos;
+        this.tipo = TiposDeSala.LAB_ROBOTICA;
     };
     
     public boolean getRobos() {
